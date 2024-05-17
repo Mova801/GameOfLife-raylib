@@ -1,8 +1,6 @@
-#include <raylib.h>
 #include <rlgl.h>
 #include <raymath.h>
 #include <string>
-#include "constants.h"
 #include "simulation.h"
 
 int main()

@@ -9,7 +9,6 @@
 #define CELL_SIZE 20 // cell size in pixels
 #define ALIVE_CELL_COLOR RED
 #define DEAD_CELL_COLOR BLACK
-#define DEFAULT_VALUE 0
 
 // simulation constants
 #define TEXT_COLOR WHITE
