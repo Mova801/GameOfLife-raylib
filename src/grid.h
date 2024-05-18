@@ -25,3 +25,4 @@ namespace GameOfLife
         std::vector<std::vector<int>> cells;
     };
 }
+

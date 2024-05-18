@@ -7,7 +7,11 @@ void GameOfLife::Grid::Draw()
         for (int col = 0; col < columns; ++col)
         {
             Color color = cells[row][col] ? ALIVE_CELL_COLOR : DEAD_CELL_COLOR;
-            DrawRectangle(row * cellSize, col * cellSize, cellSize - 1, cellSize - 1, color);
+#ifdef RECTANGULAR_CELL
+            DrawRectangle(col * cellSize, row * cellSize, cellSize - 1, cellSize - 1, color);
+#else
+            DrawCircle((col * CELL_SIZE) + (CELL_SIZE / 2), (row * CELL_SIZE) + (CELL_SIZE / 2), CELL_SIZE / 2, color);
+#endif
         }
     }
 }

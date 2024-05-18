@@ -3,14 +3,14 @@
 int GameOfLife::Simulation::CountLiveNeighbors(int row, int col)
 {
     int liveNeighbors = 0;
-    for (int i = row - 1; i <= row + 1; ++i)
+    for (int neighborRow = row - 1; neighborRow <= row + 1; ++neighborRow)
     {
-        for (int j = col - 1; j <= col + 1; ++j)
+        for (int neighborCol = col - 1; neighborCol <= col + 1; ++neighborCol)
         {
-            if (i == row && j == col)
+            if (neighborRow == row && neighborCol == col)
                 continue;
-            int y = (i + grid1.GetRows()) % grid1.GetRows();
-            int x = (j + grid1.GetColumns()) % grid1.GetRows();
+            int y = (neighborRow + grid1.GetRows()) % grid1.GetRows();
+            int x = (neighborCol + grid1.GetColumns()) % grid1.GetColumns();
             liveNeighbors += grid1.GetValue(y, x);
         }
     }

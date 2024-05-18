@@ -8,7 +8,7 @@ namespace GameOfLife
     class Simulation
     {
     public:
-        Simulation(int width, int height, int cellSize) : running(true), grid1(GameOfLife::Grid(width, height, cellSize)), grid2(GameOfLife::Grid(width, height, cellSize)){};
+        Simulation(int width, int height, int cellSize) : running(true), grid1(Grid(width, height, cellSize)), grid2(Grid(width, height, cellSize)){};
         int CountLiveNeighbors(int row, int col);
         void Draw();
         void Update();
@@ -17,7 +17,6 @@ namespace GameOfLife
         void Start() { running = true; };
         void Stop() { running = false; };
         bool IsRunning() { return running; };
-
     private:
         int running;
         Grid grid1;
